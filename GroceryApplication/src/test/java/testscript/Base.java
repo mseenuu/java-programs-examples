@@ -1,0 +1,31 @@
+package testscript;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeMethod;
+
+public class Base {
+	
+public WebDriver driver;
+	
+	@BeforeMethod
+	
+	public void browserInitialization() {
+		//to open chrome browser
+		 driver = new ChromeDriver();
+		
+		driver.get("https://groceryapp.uniqassosiates.com/admin");
+		driver.manage().window().maximize();
+		
+		
+	}
+	
+	//@AfterMethod
+	
+	public void browserQuitAndClose() {
+		//driver.close(); // to close the browser current window
+				driver.quit();
+		
+	}
+
+}
