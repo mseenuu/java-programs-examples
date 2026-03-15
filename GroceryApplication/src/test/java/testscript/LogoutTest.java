@@ -7,7 +7,7 @@ import pages.LogoutPage;
 
 public class LogoutTest extends Base {
 	
-	@Test
+	@Test(priority=1,description="logout testcase")
 
 	public void verifyLogout() {
 		 LoginPage login = new LoginPage(driver);
